@@ -2,12 +2,13 @@ version: 2.1
 
 jobs:
   test:
-    docker: 
+    docker:
       - image: python:3.6
-    steps:  
+    steps:
       - checkout
       - run: pip install flask pytest
       - run: py.test
+
 workflows:
   welcome:
     jobs:
