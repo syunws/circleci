@@ -7,6 +7,7 @@ jobs:
       - checkout
       - run: echo 'Hello, world'
       - run: cat .circleci/config.yml
+      - run: cat message.txt    
 
 workflows:
   welcome:
