@@ -19,3 +19,7 @@ workflows:
   welcome:
     jobs:
       - test
+        filters:
+          branches:
+            only:
+              - master
