@@ -17,9 +17,9 @@ jobs:
       - run: py.test  
   slack_notify:
     machine: true
-      steps:  
-        - run: echo 'Hello, world'
-        - run: "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"Hello, <Nickname>!\"}' ${SLACK_API_URL}"
+    steps:  
+      - run: echo 'Hello, world'
+      - run: "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"Hello, <Nickname>!\"}' ${SLACK_API_URL}"
 workflows:
   welcome:
     jobs:
