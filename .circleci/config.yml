@@ -6,6 +6,7 @@ jobs:
     steps:  
       - run: echo 'Hello, world'
       - run: echo 'message from soo' > "message.txt"
+      - run: cat message.txt
       - run: msg=$(<message.txt)
       - run: echo "$msg"
       - run: "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"$msg\"}' ${SLACK_API_URL}"
