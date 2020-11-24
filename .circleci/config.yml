@@ -1,14 +1,14 @@
 version: 2.1
 
 jobs:
-  test:
-    docker: 
-      - image: python:3.6
-    steps:  
+  hello:
+    machine: true
+    steps:
       - checkout
-      - run: pip install flask pytest
-      - run: py.test
+      - run: echo 'Hello, world'
+      - run: cat .circleci/config.yml
+
 workflows:
   welcome:
     jobs:
-      - test
+      - hello
